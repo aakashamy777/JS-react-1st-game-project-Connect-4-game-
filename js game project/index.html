@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect Four Game</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .game-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .game-board {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            background-color: #0066cc;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .cell {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .cell.red {
+            background-color: #ff4444;
+        }
+        .cell.yellow {
+            background-color: #ffeb3b;
+        }
+        .game-info {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .reset-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .reset-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-info" id="gameInfo">Current Turn: Red</div>
+        <div class="game-board" id="gameBoard"></div>
+        <button class="reset-button" id="resetButton">Reset Game</button>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html> 
